@@ -7,7 +7,7 @@ from fer import FER
 detector = FER(mtcnn=True)
 cap = cv2.VideoCapture(0)
 
-BEST_FRIEND_NAME = "9700616733" 
+BEST_FRIEND_NAME = "DAD" 
 SAD_DURATION_THRESHOLD = 2 
 SAD_CONFIDENCE_THRESHOLD = 0.6
 
@@ -76,3 +76,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
