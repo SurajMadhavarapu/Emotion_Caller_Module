@@ -44,3 +44,40 @@ This project demonstrates how **AI-driven emotion recognition** can promote **me
    the system executes:
    ```python
    os.system("start ms-phone:")
+# ⚙️ Installation and Setup Guide — Emotion Caller
+
+This guide walks you through the complete setup for the **Emotion Caller** project —  
+from folder creation to running the emotion detection app with GPU acceleration.
+
+---
+
+## 🧱 Step 1: Create the Project Folder
+
+Open **PowerShell** or **Command Prompt** and run:
+
+```bash
+# Create the main project directory
+mkdir Emotion_Caller_Module
+cd Emotion_Caller_Module
+
+# Create a subfolder for source code
+mkdir Emo_caller
+cd Emo_caller
+# Create a Python virtual environment (using Python 3.12)
+py -3.12 -m venv venv
+# On Windows
+venv\Scripts\activate
+
+# On macOS / Linux
+source venv/bin/activate
+pip install opencv-python fer==22.4.0 mtcnn pyautogui torch torchvision torchaudio pillow requests tensorflow tensorflow-intel
+# Create main script
+New-Item auto_call_sadness.py -ItemType File
+
+# Create a README file
+New-Item README.md -ItemType File
+
+# Create a requirements file
+New-Item requirements.txt -ItemType File
+python -c "import cv2, torch; print('OpenCV:', cv2.__version__, '| GPU available:', torch.cuda.is_available())"
+python auto_call_sadness.py
